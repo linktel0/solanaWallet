@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Solana wallet",
+    "description": "Wallet: Solana wallet with React Native & Expo",
+    "scheme": "solanawallet",
+    "slug": "solanaWallet",
+    "privacy": "public",
+    "version": "0.5.0",
+    "platforms": ["android", "ios"],
+    "githubUrl": "https://github.com/linktel0/pandas-wallet.git",
+    "orientation": "portrait",
+    "primaryColor": "#818cf8",
+    "icon": "src/assets/icon.png",
+    "splash": {
+      "backgroundColor": "#818cf8",
+      "image": "src/assets/splash.png",
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "android": {
+      "versionCode": 50
+    },
+    "ios": {
+      "buildNumber": "0.5.0",
+      "supportsTablet": true
+    }
+  }
+}

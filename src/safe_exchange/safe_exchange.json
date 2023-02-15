@@ -1,0 +1,522 @@
+{
+  "version": "0.1.0",
+  "name": "safe_exchange",
+  "instructions": [
+    {
+      "name": "initializeSolToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "taker",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        },
+        {
+          "name": "initializerAmount",
+          "type": "u64"
+        },
+        {
+          "name": "takerAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initializeTokenSol",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "initializerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        },
+        {
+          "name": "initializerAmount",
+          "type": "u64"
+        },
+        {
+          "name": "takerAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initializeTokenToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "initializerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        },
+        {
+          "name": "initializerAmount",
+          "type": "u64"
+        },
+        {
+          "name": "takerAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancelSolToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancelTokenToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "initializerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancelTokenSol",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "initializerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "exchangeSolToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "initializerReceiveTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "takerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "exchangeTokenSol",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "takerReceiveTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "exchangeTokenToken",
+      "accounts": [
+        {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "initializerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "taker",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "takerMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "initializerReceiveTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "takerWithdrawTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "takerReceiveTokenAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "exchangeState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "exchangeIdx",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "ExchangeState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "exchangeIdx",
+            "type": "u64"
+          },
+          {
+            "name": "initializer",
+            "type": "publicKey"
+          },
+          {
+            "name": "taker",
+            "type": "publicKey"
+          },
+          {
+            "name": "initializerMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "takerMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "initializerAmount",
+            "type": "u64"
+          },
+          {
+            "name": "takerAmount",
+            "type": "u64"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,339 @@
+{
+  "version": "0.1.0",
+  "name": "safe_transfer",
+  "instructions": [
+    {
+      "name": "initializeSol",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "receiver",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancelSol",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "receiver",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "transferSol",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "receiver",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initializeToken",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "receiver",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenWithdraw",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        },
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "transferToken",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "receiver",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenDeposit",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "cancelToken",
+      "accounts": [
+        {
+          "name": "sender",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "receiver",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "mint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenDeposit",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "transferState",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "escrowWallet",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "transferIdx",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "TransferState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "transferIdx",
+            "type": "u64"
+          },
+          {
+            "name": "sender",
+            "type": "publicKey"
+          },
+          {
+            "name": "receiver",
+            "type": "publicKey"
+          },
+          {
+            "name": "escrowWallet",
+            "type": "publicKey"
+          },
+          {
+            "name": "mint",
+            "type": "publicKey"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "stage",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "Stage",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "FundsDeposited"
+          },
+          {
+            "name": "EscrowComplete"
+          },
+          {
+            "name": "PullBackComplete"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "WalletToWithdrawFromInvalid",
+      "msg": "Wallet to withdraw from is not owned by owner"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidStateIdx",
+      "msg": "State index is inconsistent"
+    },
+    {
+      "code": 6002,
+      "name": "DelegateNotSetCorrectly",
+      "msg": "Delegate is not set correctly"
+    },
+    {
+      "code": 6003,
+      "name": "StageInvalid",
+      "msg": "Stage is invalid"
+    }
+  ]
+}
