@@ -52,7 +52,7 @@ export const DashboardScreen = ({ navigation }: Props) => {
 
   useEffect(()=>{
      const AsyncgetBalance = async() => {
-        //await getBalance();   
+        await getBalance();   
      }
      AsyncgetBalance();
   },[update,account,cluster])  
