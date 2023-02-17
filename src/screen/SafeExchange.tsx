@@ -24,7 +24,7 @@ export const SafeExchange = ({ navigation }: Props) =>{
     <Header goBack={() => navigation.navigate('DashboardScreen')} title={'SaveExchange'}/>
     <View className={`flex-1 w-full items-center bg-indigo-300 dark:bg-slate-800`}>
         <View className={'my-20'}>
-          <Avatar.Image size={240} source={require("../../assets/images/panda.png")} />
+          <Avatar.Image size={240} source={require("../assets/panda.png")} />
         </View>  
 
         <Button className={`bg-indigo-400 w-72 android:mt-5 dark:bg-slate-700 rounded-full`}

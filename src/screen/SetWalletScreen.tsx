@@ -80,7 +80,7 @@ export const SetWalletScreen = ({ navigation,route }: Props) => {
       <View className='justify-center items-center bg-teal-300'>
       {/*<View style={{...tw`flex-1 justify-center items-center`,backgroundColor:colors.primary}}>*/}
           <View className='h-3/6'>
-            <Avatar.Image size={240} source={require("../../assets/images/panda.png")} />
+            <Avatar.Image size={240} source={require("../assets/panda.png")} />
           </View> 
           <Button className='w-60 bg-teal-600'
             mode="contained" onPress={() => setReset(reset+1)}>

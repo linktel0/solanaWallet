@@ -141,7 +141,7 @@ export const SetAuthenticationScreen = ({ navigation }: Props) =>{
         <View className="flex-1 items-center bg-indigo-300 dark:bg-slate-800">
 
           <View>
-            <Avatar.Image size={240} source={require("../../assets/images/panda.png")} />
+            <Avatar.Image size={240} source={require("../assets/panda.png")} />
           </View> 
           <Text
             className={`text-2xl text-slate-700 dark:text-slate-300 mt-10 mb-5`}

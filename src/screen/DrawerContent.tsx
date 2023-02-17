@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import {  DrawerContentScrollView} from '@react-navigation/drawer';
 import { Avatar, Text} from 'react-native-paper';
-const panda = require('../../assets/images/panda.png')
+const panda = require('../assets/panda.png')
 import { useAccounts } from "../context";
 import { StackNavigationProp } from '@react-navigation/stack';
 import { net,web } from '../utils';

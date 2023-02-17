@@ -51,7 +51,7 @@ export function TestScreen() {
   return (
     <View className='h-full items-center bg-indigo-400'>
       <View className='mt-48 justify-center'>
-        <Avatar.Image size={240} source={require("../../assets/images/panda.png")} />
+        <Avatar.Image size={240} source={require("../assets/panda.png")} />
       </View> 
       <Text className='text-2xl font-bold mt-32'>Sonala wallet</Text>
       <Text className='text-xl mt-3'>for web3 developer</Text>
