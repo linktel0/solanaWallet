@@ -6,7 +6,10 @@
     "slug": "solanaWallet",
     "privacy": "public",
     "version": "0.5.0",
-    "platforms": ["android", "ios"],
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "githubUrl": "https://github.com/linktel0/pandas-wallet.git",
     "orientation": "portrait",
     "primaryColor": "#818cf8",
@@ -19,13 +22,21 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
-      "versionCode": 50
+      "versionCode": 50,
+      "package": "com.linktel.solanaWallet"
     },
     "ios": {
       "buildNumber": "0.5.0",
       "supportsTablet": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7d70bda7-253e-4250-b701-041ea98b1013"
+      }
     }
   }
 }

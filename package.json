@@ -45,7 +45,6 @@
     "helper": "^0.0.13",
     "i18n-js": "^4.1.1",
     "int64-buffer": "^1.0.1",
-    "isomorphic-webcrypto": "^2.3.8",
     "nativewind": "^2.0.11",
     "npm": "^9.2.0",
     "path": "^0.12.7",
