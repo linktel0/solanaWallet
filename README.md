@@ -6,15 +6,17 @@ This is a simple Solana Wallet Cross-Platform App built with Expo, Web3 & React 
 
 ### Welcome
 
-<div style="width: 30%; height: 30%">
-
-<img src="https://github.com/linktel0/image/raw/master/wallet/set_seed_auto.gif" width=20% height=20%>  
-  
-</div>
 
 This screen only shows a button to start!
 
-![Welcome](https://github.com/linktel0/image/raw/master/wallet/set_seed_auto.gif)
+![Welcome]
+<img src="https://github.com/linktel0/image/raw/master/wallet/set_seed_auto.gif" width=20% height=20%>  
+  
+
+
+
+
+
 
 
 ### Create your passcode
