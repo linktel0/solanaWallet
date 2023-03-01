@@ -14,11 +14,6 @@ This screen only shows a button to start!
   
 
 
-
-
-
-
-
 ### Create your passcode
 
 This screen let you create a passcode that for now is only requested when you want to see your recovery phrase.
