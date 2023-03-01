@@ -1,8 +1,8 @@
 import { Appbar,Avatar } from "react-native-paper";
 import {TouchableOpacity,Platform,Text, View} from 'react-native'
-import {useColorScheme } from "nativewind";
 import * as NavigationBar from 'expo-navigation-bar';
 import * as wallet from '../wallet';
+import { useAccounts } from '../context';
 
 type Props = {
   goBack?: () => void;
@@ -10,14 +10,16 @@ type Props = {
 };
 
 const Header = ({goBack,title}:Props) => {
-  const { colorScheme, toggleColorScheme } = useColorScheme();
+  const { colorScheme, toggleColorScheme } = useAccounts();
+
 
   const changeColor = async() => {
-    await toggleColorScheme();
-    await wallet.setTheme(colorScheme);
+    const newScheme =  (colorScheme === 'dark')?'light':'dark';
+    toggleColorScheme(newScheme);
+    await wallet.setTheme(newScheme);
     if (Platform.OS==='ios') return;
     await NavigationBar.setBackgroundColorAsync(
-      (colorScheme === 'dark')?'#a5b4fc':'#1e293b');
+      (newScheme === 'dark')?'#1e293b':'#a5b4fc');
   }
 
   if (title === undefined) title = ''

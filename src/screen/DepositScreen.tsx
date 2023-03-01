@@ -52,7 +52,8 @@ export const DepositScreen = ({ route, navigation }: Props) =>{
     <View className={`w-full h-full  items-center  bg-indigo-300 dark:bg-slate-800`}>
       <View className=" border-slate-300 border-8 mt-32">
         <QRCode size={200}
-        value={account.tokens.master.publicKey}/>  
+          value={account.tokens.master.publicKey}
+        /> 
       </View>
       
       <TouchableOpacity className={`mt-20 w-72 h-12 flex-row justify-between items-center bg-indigo-500 dark:bg-slate-600 rounded-full`} 

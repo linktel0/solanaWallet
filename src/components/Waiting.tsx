@@ -1,9 +1,9 @@
 import {View} from 'react-native';
 import { ActivityIndicator} from 'react-native-paper';
-import {useColorScheme } from "nativewind";
+import { useAccounts } from '../context';
 
 const Waiting = ()=>{
-    const { colorScheme, toggleColorScheme } = useColorScheme();
+    const { colorScheme } = useAccounts();
     return (
         <View className="flex-1 justify-center items-center">
             <ActivityIndicator size={'large'} 

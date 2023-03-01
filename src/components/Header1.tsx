@@ -3,9 +3,9 @@ import {TouchableOpacity,Text,View,Platform} from 'react-native'
 import * as Clipboard from 'expo-clipboard';
 import { useEffect, useState } from "react";
 import { Cluster } from "@solana/web3.js";
-import {useColorScheme } from "nativewind";
 import * as NavigationBar from 'expo-navigation-bar';
 import * as wallet from '../wallet';
+import { useAccounts } from '../context';
 
 type Props = {
   cluster: Cluster;
@@ -16,7 +16,7 @@ type Props = {
 };
 
 const Header = ({cluster,account,goBack,goTo,goTo1}:Props) => {
-  const { colorScheme, toggleColorScheme } = useColorScheme();
+  const { colorScheme, toggleColorScheme } = useAccounts();
   const [hasCopyed,setHasCopyed] = useState(false);
   
   const copyToClipboard = async (publicKey:string) => {
@@ -36,11 +36,13 @@ const Header = ({cluster,account,goBack,goTo,goTo1}:Props) => {
   if (account === undefined) return (<></>)
 
   const changeColor = async() => {
-    await toggleColorScheme();
-    await wallet.setTheme(colorScheme);
+    
+    const newScheme =  (colorScheme === 'dark')?'light':'dark';
+    toggleColorScheme(newScheme);
+    await wallet.setTheme(newScheme);
     if (Platform.OS==='ios') return;
     await NavigationBar.setBackgroundColorAsync(
-      (colorScheme === 'dark')?'#a5b4fc':'#1e293b');
+      (newScheme === 'dark')?'#1e293b':'#a5b4fc');
   }
 
   return(

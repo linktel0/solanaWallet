@@ -8,9 +8,7 @@ import React, {
 import { IAccount, ITokenInfo} from "../wallet";
 import { net,web } from "../utils";
 import * as solanaWeb3 from "@solana/web3.js";
-//import { Wallet } from "../dist/cjs";
-//import { IToken } from "../../storage/asyncStore";
-//import {useColorScheme } from "nativewind";
+import {useColorScheme } from "nativewind";
 
 
 interface ProviderProps {
@@ -34,15 +32,15 @@ export interface IContext {
   setTokenMap: React.Dispatch<React.SetStateAction<Map<string,ITokenInfo>>>,
   //visible: boolean,
   //setVisible: React.Dispatch<React.SetStateAction<boolean>>,
-//  colorScheme: string,
-//  toggleColorScheme: React.Dispatch<React.SetStateAction<string>>,
+  colorScheme: string,
+  toggleColorScheme: React.Dispatch<React.SetStateAction<string>>,
 
 }
 
 const Context = createContext<IContext>({} as IContext);
 
 export function ContextProvider({ children }: ProviderProps): JSX.Element {
-//  const { colorScheme, toggleColorScheme } = useColorScheme();
+  const { colorScheme, toggleColorScheme } = useColorScheme();
   const [cluster,setCluster] = useState<solanaWeb3.Cluster>(net.devnet);
   const [explorer,setExplorer] = useState<web>(web.Solana_Beach);
   const [tokenMap,setTokenMap] = useState<Map<string,ITokenInfo>>(new Map<string,ITokenInfo>());
@@ -85,8 +83,8 @@ export function ContextProvider({ children }: ProviderProps): JSX.Element {
 
     //visible: visible,
     //setVisible: setVisible,
- //   colorScheme: colorScheme,
- //   toggleColorScheme:toggleColorScheme,
+    colorScheme: colorScheme,
+    toggleColorScheme:toggleColorScheme,
   }
 
    return (
