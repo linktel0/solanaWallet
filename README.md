@@ -8,7 +8,7 @@ This is a simple Solana Wallet Cross-Platform App built with Expo, Web3 & React 
 
 This screen only shows a button to start!
 
-![Welcome](https://moviendo.me/building-a-solana-wallet-cross-platform-app-with-expo-web3-and-react-native/welcome-1e53e78c.png)
+![Welcome](https://github.com/linktel0/image/raw/master/wallet/set_seed_auto.gif)
 
 
 ### Create your passcode
