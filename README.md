@@ -14,7 +14,7 @@ This screen only shows a button to start!
   justify-content: space-between;
 }
 
-<div id="content">
+<div class="content">
 <img src="https://github.com/linktel0/image/raw/master/wallet/authenticate.gif" width=20% height=20%> 
 <img src="https://github.com/linktel0/image/raw/master/wallet/auto_set_seed.gif" width=20% height=20%> 
 <img src="https://github.com/linktel0/image/raw/master/wallet/recovery_seed.gif" width=20% height=20%>  
