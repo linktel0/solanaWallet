@@ -6,8 +6,7 @@ This is a simple Solana Wallet Cross-Platform App built with Expo, Web3 & React 
 
 ### Welcome
 
-
-This screen only shows a button to start!
+This screen shows using the Biometric Prompt (Android) or FaceID and TouchID (iOS) to authenticate the user with a fingerprint or face scan.
 
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/authenticate.gif" width=20% height=20%> 
