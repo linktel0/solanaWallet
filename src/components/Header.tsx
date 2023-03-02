@@ -12,7 +12,6 @@ type Props = {
 const Header = ({goBack,title}:Props) => {
   const { colorScheme, toggleColorScheme } = useAccounts();
 
-
   const changeColor = async() => {
     const newScheme =  (colorScheme === 'dark')?'light':'dark';
     toggleColorScheme(newScheme);
