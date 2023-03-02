@@ -8,7 +8,7 @@ This is a simple Solana Wallet Cross-Platform App built with Expo, Web3 & React 
 
 
 This screen only shows a button to start!
-<div>
+<div style="display: flex; justify-content: center;">
 <img src="https://github.com/linktel0/image/raw/master/wallet/authenticate.gif" width=30% height=20%> 
 <img src="https://github.com/linktel0/image/raw/master/wallet/auto_set_seed.gif" width=30% height=20%> 
 <img src="https://github.com/linktel0/image/raw/master/wallet/recovery_seed.gif" width=30% height=20%>  
