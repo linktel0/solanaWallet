@@ -56,7 +56,12 @@ export const getSeed = async()=>{
 }
 
 export const getTheme = async()=>{
-  return await asyncModel.getTheme();
+  let theme = await asyncModel.getTheme()
+  if (theme == undefined) {
+    theme = 'light';
+    await asyncModel.setTheme(theme);
+  }
+  return theme;
 }
 
 export const setTheme = async(theme:string)=>{

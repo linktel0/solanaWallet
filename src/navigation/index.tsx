@@ -10,17 +10,19 @@ import * as NavigationBar from 'expo-navigation-bar';
 //import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Navigator() {
-    const {accounts,toggleColorScheme} = useAccounts();
-    
+    const {accounts,colorScheme,toggleColorScheme} = useAccounts();
+  
     useEffect(()=>{
-        const changeColor = async() => {
+        const asyncRun = async() => {
           const theme = await wallet.getTheme();
-          toggleColorScheme(theme);
+          if(theme != colorScheme) {
+            toggleColorScheme(theme);
+          }
           if (Platform.OS==='ios') return;
           await NavigationBar.setBackgroundColorAsync(
             (theme === 'dark')?'#1e293b':'#a5b4fc');
         }
-        changeColor();
+        asyncRun();
       },[])
 
     console.log('accounts.length',accounts.length)

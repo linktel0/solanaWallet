@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useAccounts } from "../context";
 import {Waiting} from '../components';
 import * as wallet from '../wallet';
-import { Button,Avatar,useTheme } from 'react-native-paper';
+import { Button,Avatar } from 'react-native-paper';
 
 
 type RootStackParamList = {
@@ -24,7 +24,6 @@ type Props = {
 };
 
 export const SetWalletScreen = ({ navigation,route }: Props) => {
-    const {colors} = useTheme();
     const [isLoading,setIsloading] = useState(true);
     const {setAccounts} = useAccounts();
     const [hasPin,setHasPin] = useState(false);
