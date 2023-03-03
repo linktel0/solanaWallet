@@ -68,13 +68,12 @@ https://github.com/linktel0/safe_exchange.git
 
 ### Others
 
- History, remove recovery phrase, change explorer
+ History, remove recovery phrase, change Web3 explorer
 
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/history.gif" width=20% height=20%> 
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp 
 <img src="https://github.com/linktel0/image/raw/master/wallet/remove_seed.gif" width=20% height=20%>  
-
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp
 <img src="https://github.com/linktel0/image/raw/master/wallet/change_explorer.gif" width=20% height=20%> 
 </div>
