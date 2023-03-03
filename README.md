@@ -42,7 +42,7 @@ These screens show minting new tokens, airdropping Sol/Usdc. Convenient for deve
 
 
 
-### SafeTransfer
+### Safe Transfer
 Build the "Safe Token Transfer app", that prevents funds from being lost.
 When someone wants to transfer tokens to a particular user, they do it in 2 steps to enforce safety. First, they deposit those tokens into an escrow token account that is controlled by our program. Second, the final receiver of the tokens confirms the withdrawal and receives the funds from the escrow.
 If they fat-fingered receiver's address, or if receiver cannot find his keys anymore, they can safely pull back his Safe Payment before the transfer is complete.This smart contract repository:https://github.com/linktel0/safe-transfer.git 
@@ -54,7 +54,7 @@ If they fat-fingered receiver's address, or if receiver cannot find his keys any
 </div>
 
 
-### SafeTransfer
+### Safe Exchange
 Introduce a third party C which both A and B trust.A or B can go first and send their token to C. C then waits for the other party to send their token and only then does C release both token.The blockchain way is to replace the trusted third party C with code on a blockchain, specifically a smart contract that verifiably acts the same way a
 trusted third party would. This smart contract repository:
 https://github.com/linktel0/safe_exchange.git 
@@ -64,3 +64,4 @@ https://github.com/linktel0/safe_exchange.git
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange_comfirm.gif" width=20% height=20%>  
 </div>
+
