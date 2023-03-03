@@ -18,8 +18,7 @@ This screen shows using the Biometric Prompt (Android) or FaceID and TouchID (iO
   
 ### Dashboard
 
-This screen shows the accounts SOL balance,SPL-token balances,SOL deposit,SPL-token deposits, SOL transfers,SPL-token transfers.
-Camera support with QR code scanning for Sol and token deposit, transfer.
+This screen shows the accounts SOL/SPL-token balances,SOL/SPL-token deposits, SOL/SPL-token transfers. Camera support with QR code scanning for Sol/SPL-token deposit, transfer.
 
 
 <div align="center">
