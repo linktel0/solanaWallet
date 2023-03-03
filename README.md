@@ -33,9 +33,9 @@ These screens shows the accounts SOL/SPL-token balances,SOL/SPL-token deposits, 
 These screens show minting new tokens, airdropping Sol/Usdc. Convenient for developers
 
 <div align="center">
-<img src="https://github.com/linktel0/image/raw/master/wallet/dashboard.gif" width=20% height=20%> 
+<img src="https://github.com/linktel0/image/raw/master/wallet/mint.gif" width=20% height=20%> 
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
-<img src="https://github.com/linktel0/image/raw/master/wallet/mutil_accounts.gif" width=20% height=20%> 
+<img src="https://github.com/linktel0/image/raw/master/wallet/airdrop.gif" width=20% height=20%> 
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
-<img src="https://github.com/linktel0/image/raw/master/wallet/send.gif" width=20% height=20%>  
+<img src="https://github.com/linktel0/image/raw/master/wallet/airdrop_usdc.gif" width=20% height=20%>  
 </div>
