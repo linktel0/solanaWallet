@@ -49,17 +49,23 @@ These screens show minting new tokens, airdropping Sol/Usdc. Convenient for deve
 
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_transfer.gif" width=20% height=20%> 
-&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_transfer_comfirm.gif" width=20% height=20%>  
 </div>
 
 
 ### SafeTransfer
-    Introduce a third party C which both A and B trust. A or B can go first and send their token to C. C then waits for the other party to send their token and only then does C release both token.
-    The blockchain way is to replace the trusted third party C with code on a blockchain, specifically a smart contract that verifiably acts the same way a trusted third party would. This smart contract repository:https://github.com/linktel0/safe_exchange.git 
+    Introduce a third party C which both A and B trust. 
+    A or B can go first and send their token to C. C then waits for 
+    the other party to send their token and only then does C release both token.
+    The blockchain way is to replace the trusted third party C with code on a 
+    blockchain, specifically a smart contract that verifiably acts the same way a
+    trusted third party would. 
+    This smart contract repository:
+    https://github.com/linktel0/safe_exchange.git 
 
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange.gif" width=20% height=20%> 
-&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange_comfirm.gif" width=20% height=20%>  
 </div>
