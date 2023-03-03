@@ -77,3 +77,44 @@ https://github.com/linktel0/safe_exchange.git
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp
 <img src="https://github.com/linktel0/image/raw/master/wallet/change_explorer.gif" width=20% height=20%> 
 </div>
+
+#### Request Airdrop
+
+This app is configured to connect to dev network so the tokens showed are not real.
+Good thing is that every time you press here you get 2 SOL in your account that can be used to test the app, make transfers...
+
+
+## What I used to build this Solana Wallet
+
+### Expo
+Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
+ - [Expo](https://expo.io/)
+
+
+### Solana/web3.js
+This is the Solana Javascript API built on the Solana JSON RPC API.
+ - [Solana/web3.js](https://solana-labs.github.io/solana-web3.js/)
+
+### React Native Paper
+Paper is a collection of customizable and production-ready components for React Native, following Google’s Material Design guidelines.
+ - [React Native Paper](https://callstack.github.io/react-native-paper/)
+
+### React Navigation
+Routing and navigation for Expo and React Native apps.
+ - [React Navigation](https://reactnavigation.org/)
+
+### More
+
+Moreover I used other libraries for crypto, qr generate and scan...
+
+You can check them in [package.json](https://github.com/linktel0/solanaWallet/blob/main/package.json)
+
+## Problems that I found and workarounds to solve them
+
+### Crypto dependency
+
+`solana/web3.js` needs `Crypto` that it seems that now it's included in NodeJS but no in React Native and although I found some ways to have it working in React Native I didn't find a w
+ay to do it without ejecting the app from Expo.
+
+Finally I found a workaround that basically uses `ethers.js` and `expo-random` to be able to generate mnemonic and seed. Later, I was able to use `solana/web3.js` without issues to conn
+ect to the network, get balance, transfer...
