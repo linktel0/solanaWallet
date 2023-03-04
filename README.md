@@ -150,7 +150,7 @@ I think it has been a good introduction to see how Web3 works.
 $ git clone https://github.com/linktel0/solanaWallet.git
 $ cd solanaWallet
 $ yarn 
-$ expo web or expo start
+$ expo start
 ~~~
 
 Or install apk for Android:
