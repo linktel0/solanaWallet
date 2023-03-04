@@ -50,7 +50,7 @@ If they fat-fingered receiver's address, or if receiver cannot find his keys any
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_transfer.gif" width=20% height=20%> 
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
-<img src="https://github.com/linktel0/image/raw/master/wallet/safe_transfer_comfirm.gif" width=20% height=20%>  
+<img src="https://github.com/linktel0/image/raw/master/wallet/safe_transfer_confirm.gif" width=20% height=20%>  
 </div>
 
 
@@ -62,7 +62,7 @@ https://github.com/linktel0/safe_exchange.git
 <div align="center">
 <img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange.gif" width=20% height=20%> 
 &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp 
-<img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange_comfirm.gif" width=20% height=20%>  
+<img src="https://github.com/linktel0/image/raw/master/wallet/safe_exchange_confirm.gif" width=20% height=20%>  
 
 </div>
 
