@@ -90,10 +90,22 @@ Good thing is that every time you press here you get 2 SOL in your account that 
 Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.
  - [Expo](https://expo.io/)
 
+### TypeScript
+TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+ - [TypeScript](https://www.typescriptlang.org/)
 
 ### Solana/web3.js
 This is the Solana Javascript API built on the Solana JSON RPC API.
  - [Solana/web3.js](https://solana-labs.github.io/solana-web3.js/)
+
+###  @solana/spl-token
+TypeScript library for interacting with the SPL Token and Token-2022 programs.
+ - [ @solana/spl-token](https://www.npmjs.com/package/@solana/spl-token) 
+
+
+###  @project-serum/anchor
+TypeScript client for Anchor programs.
+ - [ @project-serum/anchor](https://www.npmjs.com/package/@project-serum/anchor) 
 
 ### React Native Paper
 Paper is a collection of customizable and production-ready components for React Native, following Google’s Material Design guidelines.
@@ -106,6 +118,10 @@ Routing and navigation for Expo and React Native apps.
 ### Tailwind CSS
 NativeWind uses Tailwind CSS as scripting language to create a universal style system for React Native
 - [NativeWind](https://www.nativewind.dev//)
+
+### Rust
+Solana supports writing on-chain programs using the Rust programming language.
+- [Rust](https://www.rust-lang.org/)
 
 ### More
 

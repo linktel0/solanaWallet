@@ -10,10 +10,8 @@ import * as ed25519 from "ed25519-hd-key";
 import nacl from "tweetnacl";
 import * as anchor from '../dist/cjs'
 import NodeWallet from "../dist/cjs/nodewallet";
-import utf8 from "../dist/cjs/utils/bytes/utf8";
 import idl from './spl_token_faucet.json';
 import { IToken } from "../wallet";
-import { createAccount, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 const bs58 = require('bs58');
 
 const UsadcAddress = 'Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr';
