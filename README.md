@@ -135,15 +135,6 @@ You can check them in [package.json](https://github.com/linktel0/solanaWallet/bl
 
 `solana/web3.js` needs `Crypto` that it seems that now it's included in NodeJS but no in React Native and although I found some ways to have it working in React Native I didn't find a way to do it without ejecting the app from Expo.
 
-Finally I found a workaround that basically uses `ethers.js` and `expo-random` to be able to generate mnemonic and seed. Later, I was able to use `solana/web3.js` without issues to connect to the network, get balance, transfer...
-
-
-## Final
-My goal with this was to learn the Web3 basics building something simple and sharing 100% of the code between Web and Native.
-
-I think it has been a good introduction to see how Web3 works.
-
-
 ## Run it:
 
 ~~~bash
