@@ -129,11 +129,6 @@ Moreover I used other libraries for crypto, qr generate and scan...
 
 You can check them in [package.json](https://github.com/linktel0/solanaWallet/blob/main/package.json)
 
-## Problems that I found and workarounds to solve them
-
-### Crypto dependency
-
-`solana/web3.js` needs `Crypto` that it seems that now it's included in NodeJS but no in React Native and although I found some ways to have it working in React Native I didn't find a way to do it without ejecting the app from Expo.
 
 ## Run it:
 
