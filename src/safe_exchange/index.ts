@@ -72,11 +72,11 @@ export const getExchangeCancelList = async(
 }
 
 
-export const getTransferComfirmlList = async(
+export const getTransferConfirmlList = async(
   cluster:solanaWeb3.Cluster, 
   taker:solanaWeb3.Keypair,
 ) =>{
-  console.log('getTransferComfirmlList');
+  console.log('getTransferConfirmlList');
   const connection = utils.createConnection(cluster);
   const program = await getProgram(connection,taker);
   const exchangeStates = await program.account.exchangeState.all([{
@@ -446,13 +446,13 @@ export const ExchangeCancel = async(
 }
 
 
-export const ExchangeComfirm = async(
+export const ExchangeConfirm = async(
   cluster:solanaWeb3.Cluster, 
   taker:solanaWeb3.Keypair,
   exchange_data:  IExdata,
   )=>{
   
-    console.log('SafeExchangeComfirm');
+    console.log('SafeExchangeConfirm');
     const connection = utils.createConnection(cluster);
     const program = await getProgram(connection,taker);
 
@@ -485,7 +485,7 @@ export const ExchangeComfirm = async(
         program.programId
       ))[0];
 
-      console.log('SafeExchangeComfirm_sol_token',exchange_state);
+      console.log('SafeExchangeConfirm_sol_token',exchange_state);
       const signature = await program.methods
       .exchangeSolToken(
         exchangeIdx
@@ -503,7 +503,7 @@ export const ExchangeComfirm = async(
         .signers([taker])
         .rpc();
       
-        console.log('SafeExchangeComfirm_sol_token is finished',signature);
+        console.log('SafeExchangeConfirm_sol_token is finished',signature);
     }
     if (!exchange_data.initializerMint.toString().includes(Sol) && 
               exchange_data.takerMint.toString().includes(Sol)){
@@ -536,7 +536,7 @@ export const ExchangeComfirm = async(
           program.programId
         ))[0];
 
-        console.log('SafeExchangeComfirm_token_token',escrow_wallet,exchange_state);
+        console.log('SafeExchangeConfirm_token_token',escrow_wallet,exchange_state);
         const signature = await program.methods
         .exchangeTokenSol(
           exchangeIdx
@@ -554,7 +554,7 @@ export const ExchangeComfirm = async(
           .signers([taker])
           .rpc();
         
-        console.log('SafeExchangeComfirm_token_token is finished',signature);
+        console.log('SafeExchangeConfirm_token_token is finished',signature);
     }
 
     if (!exchange_data.initializerMint.toString().includes(Sol) && 
@@ -604,7 +604,7 @@ export const ExchangeComfirm = async(
           program.programId
         ))[0];
 
-        console.log('SafeExchangeComfirm_token_token',escrow_wallet,exchange_state);
+        console.log('SafeExchangeConfirm_token_token',escrow_wallet,exchange_state);
         const signature = await program.methods
         .exchangeTokenToken(
           exchangeIdx
@@ -624,6 +624,6 @@ export const ExchangeComfirm = async(
           .signers([taker])
           .rpc();
         
-        console.log('SafeExchangeComfirm_token_token is finished',signature);
+        console.log('SafeExchangeConfirm_token_token is finished',signature);
     }
 }

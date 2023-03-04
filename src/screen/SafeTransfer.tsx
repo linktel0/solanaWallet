@@ -38,8 +38,8 @@ export const SafeTransfer = ({ navigation }: Props) =>{
         </Button>  
 
         <Button className={`bg-indigo-400 w-72 dark:bg-slate-700 mt-5 rounded-full`}
-            mode="contained" onPress={() => navigation.navigate('SafeTransferComfirm')}>
-            <Text className={`text-base ml-5  text-slate-700 dark:text-slate-300 `}>Transfer Comfirm</Text>
+            mode="contained" onPress={() => navigation.navigate('SafeTransferConfirm')}>
+            <Text className={`text-base ml-5  text-slate-700 dark:text-slate-300 `}>Transfer Confirm</Text>
         </Button>
       </View>
     </>

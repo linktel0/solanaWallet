@@ -38,8 +38,8 @@ export const SafeExchange = ({ navigation }: Props) =>{
         </Button>  
 
         <Button className={`bg-indigo-400 w-72 dark:bg-slate-700 mt-5 rounded-full`}
-            mode="contained" onPress={() => navigation.navigate('SafeExchangeComfirm')}>
-            <Text className={`text-base ml-5  text-slate-700 dark:text-slate-300 `}>Comfirm Exchange</Text>
+            mode="contained" onPress={() => navigation.navigate('SafeExchangeConfirm')}>
+            <Text className={`text-base ml-5  text-slate-700 dark:text-slate-300 `}>Confirm Exchange</Text>
         </Button>
       </View>
     </>

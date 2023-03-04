@@ -68,11 +68,11 @@ export const getTransferCancelList = async(
 }
 
 
-export const getTransferComfirmList = async(
+export const getTransferConfirmList = async(
   cluster:solanaWeb3.Cluster, 
   receiver:solanaWeb3.Keypair,
 ) =>{
-  console.log('getTransferComfirmList');
+  console.log('getTransferConfirmList');
   const connection = utils.createConnection(cluster);
   const program = await getProgram(connection,receiver);
   const transferStates = await program.account.transferState.all([{
@@ -311,13 +311,13 @@ export const TransferCancel = async(
 }
 
 
-export const TransferComfirm = async(
+export const TransferConfirm = async(
   cluster:solanaWeb3.Cluster, 
   receiver:solanaWeb3.Keypair,
   transfer_data:  ITransferDate,
   )=>{
   
-    console.log('SafeTransferComfirm 0');
+    console.log('SafeTransferConfirm 0');
     const connection = utils.createConnection(cluster);
     const program = await getProgram(connection,receiver);
 
@@ -325,7 +325,7 @@ export const TransferComfirm = async(
     const transfer_idx = transfer_data.transferIdx;
 
     if (transfer_data.mint.toString().includes('So11111111111111111111111111111111111111112')) {
-      console.log('SafeTransferComfirm_Sol:',transfer_data.mint);
+      console.log('SafeTransferConfirm_Sol:',transfer_data.mint);
 
       const transfer_state = (await solanaWeb3.PublicKey.findProgramAddress(
         [new TextEncoder().encode("state"), 
@@ -336,7 +336,7 @@ export const TransferComfirm = async(
         program.programId
       ))[0];
 
-      console.log('SafeTransferComfirm 1');
+      console.log('SafeTransferConfirm 1');
       
       const signature = await program.methods
       .transferSol(
@@ -351,7 +351,7 @@ export const TransferComfirm = async(
       .signers([receiver])
       .rpc();
       
-      console.log('SafeTransferComfirm_Sol is finished',signature);
+      console.log('SafeTransferConfirm_Sol is finished',signature);
     }
     else {
       const mint = await solanaToken.getMint(connection,transfer_data.mint);
@@ -382,7 +382,7 @@ export const TransferComfirm = async(
         program.programId
       ))[0];
 
-      console.log('SafeTransferComfirm 1');
+      console.log('SafeTransferConfirm 1');
       
       const signature = await program.methods
       .transferToken(
@@ -400,7 +400,7 @@ export const TransferComfirm = async(
       .signers([receiver])
       .rpc();
       
-      console.log('SafeTransferComfirm is finished',signature);
+      console.log('SafeTransferConfirm is finished',signature);
     }
 }
   /*
@@ -536,13 +536,13 @@ export const TransferCancel = async(
 }
 
 
-export const TransferComfirm = async(
+export const TransferConfirm = async(
   cluster:solanaWeb3.Cluster, 
   receiver:solanaWeb3.Keypair,
   transfer_data:  ITransferDate,
   )=>{
   
-    console.log('SafeTransferComfirm 0');
+    console.log('SafeTransferConfirm 0');
     const connection = utils.createConnection(cluster);
     const program = await getProgram(connection,receiver);
 
@@ -576,7 +576,7 @@ export const TransferComfirm = async(
       program.programId
     ))[0];
 
-    console.log('SafeTransferComfirm 1');
+    console.log('SafeTransferConfirm 1');
     
     const signature = await program.methods
     .transferToken(
@@ -595,7 +595,7 @@ export const TransferComfirm = async(
     .signers([receiver])
     .rpc();
     
-    console.log('SafeTransferComfirm is finished',signature);
+    console.log('SafeTransferConfirm is finished',signature);
     
 }
 */ 

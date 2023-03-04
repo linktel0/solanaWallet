@@ -18,11 +18,11 @@ type RootStackParamList = {
   SafeExchange: undefined ;
   SafeExchangeCreate: undefined ;
   SafeExchangeCancel: undefined ;
-  SafeExchangeComfirm: undefined ;
+  SafeExchangeConfirm: undefined ;
   SafeTransfer:  undefined ;
   SafeTransferCreate:undefined ;
   SafeTransferCancel:undefined ;
-  SafeTransferComfirm:undefined ;
+  SafeTransferConfirm:undefined ;
   RemoveRecoveryPhrase:undefined ;
 };
 
@@ -120,10 +120,10 @@ export default function StackNavigator() {
       />
 
       <Stack.Screen
-        name="SafeExchangeComfirm"
-        component={screen.SafeExchangeComfirm}
+        name="SafeExchangeConfirm"
+        component={screen.SafeExchangeConfirm}
         options={{
-            title: 'SafeExchangeComfirm',
+            title: 'SafeExchangeConfirm',
         }}
       />
 
@@ -152,10 +152,10 @@ export default function StackNavigator() {
       />
 
       <Stack.Screen
-        name="SafeTransferComfirm"
-        component={screen.SafeTransferComfirm}
+        name="SafeTransferConfirm"
+        component={screen.SafeTransferConfirm}
         options={{
-            title: 'SafeTransferComfirm',
+            title: 'SafeTransferConfirm',
         }}
       />
 
