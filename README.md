@@ -103,6 +103,10 @@ Paper is a collection of customizable and production-ready components for React 
 Routing and navigation for Expo and React Native apps.
  - [React Navigation](https://reactnavigation.org/)
 
+### Tailwind CSS
+NativeWind uses Tailwind CSS as scripting language to create a universal style system for React Native
+- [NativeWind](https://www.nativewind.dev//)
+
 ### More
 
 Moreover I used other libraries for crypto, qr generate and scan...
