@@ -1,7 +1,7 @@
 import React, { useEffect,  useState } from "react";
 import {View,Text,TouchableOpacity,ScrollView } from 'react-native'
 import { Avatar } from "react-native-paper";
-import {useNavigation,DrawerActions, RouteProp}  from "@react-navigation/native";
+import {useNavigation,DrawerActions, RouteProp,useIsFocused}  from "@react-navigation/native";
 import { getHistory, ITransaction, urlMap } from '../utils'
 import { useAccounts } from "../context";
 import * as wallet from '../wallet'
@@ -32,8 +32,10 @@ export const History = ({ route,navigation }: Props) => {
   
   const {update,tokenMap,cluster,account,explorer} = useAccounts();
   const navigator = useNavigation();
+  const isFocused = useIsFocused();
 
   useEffect(() => {
+    if (!isFocused) return;
     const publicKey = account.tokens.master.publicKey
     setIsLoading(true);
     async function getAsync(){
@@ -44,10 +46,8 @@ export const History = ({ route,navigation }: Props) => {
       }
     };
     getAsync();
-    //console.log('navigation',route.params.itemId);
-  }, [account,cluster,update]);
-  
-
+  }, [account,cluster,update,isFocused]);
+    
   let bak = '';
   let visible = true;
 

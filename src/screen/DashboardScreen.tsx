@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View ,Text,TouchableOpacity} from "react-native";
 import {  Header1 } from "../components";
 import { Avatar, Button } from "react-native-paper";
-import {useNavigation,DrawerActions}  from "@react-navigation/native";
+import {useNavigation,DrawerActions,useIsFocused}  from "@react-navigation/native";
 import * as  utils from "../utils";
 import { useAccounts } from "../context";
 import Waiting from '../components/Waiting';
@@ -33,6 +33,7 @@ export const DashboardScreen = ({ navigation }: Props) => {
   const [tokens,setTokens] = useState<wallet.IToken[]>([]);
   const [action,setAction] = useState('Deposit');
   const navigator = useNavigation();
+  const isFocused = useIsFocused();
 
 
   //setVisible(true);
@@ -51,13 +52,13 @@ export const DashboardScreen = ({ navigation }: Props) => {
   },[])
 
   useEffect(()=>{
+    if (!isFocused) return;
      const AsyncgetBalance = async() => {
         await getBalance();   
      }
-     AsyncgetBalance();
-  },[update,account,cluster])  
-
-  
+     AsyncgetBalance();    
+  },[isFocused])  
+ 
   const getBalance = async () =>{
     if(!account.tokens.master.publicKey) return;
     setIsLoading(true);
